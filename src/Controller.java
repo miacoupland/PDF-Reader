@@ -10,9 +10,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    @FXML private Label book, pageCount;
+    @FXML private Label book, pageCount, bookmark;
     @FXML private TextField fileNameField, skipToPage;
-    @FXML private Button readBtn, pageBack, pageForward, skip;
+    @FXML private Button readBtn, pageBack, pageForward, skip, addBookmark;
     private Reader reader;
     private int startPage, endPage;
 
@@ -23,13 +23,13 @@ public class Controller implements Initializable {
         this.endPage = 1; //page numbers are inclusive
     }
 
-    @FXML public void setText(String text) {
+    @FXML public void addText(String text) {
         book.setText(text);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setText("READING");
+        addText("READING");
     }
 
     public int getStartPage() {return startPage;}
@@ -60,14 +60,17 @@ public class Controller implements Initializable {
         read();
     }
 
+    @FXML public void addBookmark(Event e) throws IOException {
+        bookmark.setText("Bookmark on page " + startPage);
+    }
+
     @FXML public void read() throws IOException {
         try {
-            setText(reader.read( new File(fileNameField.getText()), startPage, endPage));
+            addText(reader.read( new File(fileNameField.getText()), startPage, endPage));
             pageCount.setText("Page: " + getStartPage());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-
 }

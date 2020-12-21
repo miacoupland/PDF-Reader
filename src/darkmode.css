@@ -1,0 +1,43 @@
+.root, .scroll-pane, .button, .label {
+    -fx-font-family: Arial;
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+.root {
+    -fx-background-color: #282a36;
+}
+
+.button {
+    -fx-background-color: #282a36;
+    -fx-text-fill: white;
+    -fx-border-color: #50fa7b;
+    -fx-border-radius: 5;
+}
+
+#pageCount {
+    -fx-text-fill: white;
+}
+
+.scroll-pane {
+    -fx-border-color: #50fa7b;
+    -fx-background: #282a36;
+    -fx-fill: #44475a;
+}
+
+.scroll-bar {
+    -fx-background-color: #282a36;
+    -fx-border-color: #50fa7b;
+}
+
+.text-field {
+    -fx-border-color: #ff79c6;
+    -fx-text-fill: white;
+    -fx-background-color: #44475a;
+}
+
+#book {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-fill: #44475a;
+}

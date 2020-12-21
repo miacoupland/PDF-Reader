@@ -5,7 +5,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <GridPane fx:controller="Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+        stylesheets="darkmode.css">
     <HBox alignment="center" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
         <TextField fx:id="fileNameField"/>
         <Button fx:id="readBtn" text="Read File" onAction="#readBtn"/>
@@ -20,4 +21,8 @@
                 GridPane.columnIndex="0" GridPane.rowIndex="1">
         <Label fx:id="book"/>
     </ScrollPane>
+    <HBox alignment="center" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button fx:id="addBookmark" text="Add bookmark here" onAction="#addBookmark"/>
+        <Label fx:id="bookmark" text="Bookmark: "/>
+    </HBox>
 </GridPane>
