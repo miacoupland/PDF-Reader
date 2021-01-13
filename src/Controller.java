@@ -56,7 +56,7 @@ public class Controller implements Initializable {
 
     @FXML public void skip(Event e) throws IOException {
         startPage = Integer.valueOf(skipToPage.getText());
-        endPage = startPage + 1;
+        endPage = startPage;
         read();
     }
 
